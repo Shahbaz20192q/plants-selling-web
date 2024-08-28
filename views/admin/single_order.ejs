@@ -1,0 +1,38 @@
+<div class="order-container">
+  <h1>Order</h1>
+  <div class="order">
+    <div class="image-container">
+      <% for( let i = 0; i < 1; i++ ) { %>
+      <img
+        src="/images/products/<%= order.productImage[i] %>"
+        alt="Product's image"
+      /><% } %>
+    </div>
+    <div class="order-details">
+      <h3><%= order.productName %></h3>
+      <h3>Quantity : <%= order.quantity %></h3>
+      <h3>Totle price : <%= order.productPrice %></h3>
+    </div>
+    <div class="user_info">
+      <h2>User's Information</h2>
+
+      <p>
+        <span><%= order.firstName %></span> <span><%= order.lastName %></span>
+      </p>
+      <p>Email : <%= order.email %></p>
+      <p>Phone Number : <%= order.phone %></p>
+      <p>countery : <%= order.countery %></p>
+      <p>State/Province : <%= order.state %></p>
+      <p>City : <%= order.city %></p>
+      <p>Full Address : <%= order.address %></p>
+      <p>Zip Code : <%= order.zip %></p>
+      <p>paymob Order Id : <%= order.paymob_order_id %></p>
+      <p>Payment Status : <%= order.payment_status %></p>
+    </div>
+  </div>
+  <div class="btns-div">
+    <a class="complete_btn" href="/order/Complete/<%= order._id %>">complete</a>
+    <a class="delete_btn" href="/order/delete/<%=order._id%>">Delete</a>
+    <a class="cancel_btn" href="/order/cancel/<%=order._id%>">Cancel</a>
+  </div>
+</div>

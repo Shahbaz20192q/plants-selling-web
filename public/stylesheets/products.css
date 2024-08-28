@@ -1,0 +1,58 @@
+.f-heading{
+    font-size: 25px;
+    margin: 10px;
+    color: var(--light-green-color);
+}
+
+.product-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 5px;
+}
+.product{
+    border: 1px solid var(--green-color);
+    width: 300px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.product .image-box{
+    height: 250px;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.product .image-box img{
+    height: 100%;
+    width: 100%;
+    transition: all ease-in .5s;
+}
+
+.product .p-name{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: var(--green-color);
+}
+
+.product .p-name h3{
+    font-size: 18px;
+}
+
+.product .p-description{
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.product:hover img{
+    scale: 1.2;
+}

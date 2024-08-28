@@ -1,0 +1,21 @@
+<h2>customers</h2>
+<a href="/admin/customers/mail" class="customers-mail-link">Send Mail</a>
+
+<table class="customers-table">
+  <thead>
+    <tr>
+      <th>Sr No</th>
+      <th>Emails</th>
+      <th>Send Mail</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% customers.forEach((customer,index) => { %>
+    <tr>
+      <td><%= index+1 %></td>
+      <td><%= customer.customer %></td>
+      <td><a href="/admin/customer/mail/<%= customer._id %>">Send</a></td>
+    </tr>
+    <% }) %>
+  </tbody>
+</table>

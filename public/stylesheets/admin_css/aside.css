@@ -1,0 +1,30 @@
+.admin-aside {
+  padding: 20px;
+  height: 100%;
+  background-color: var(--white-color);
+  height: 100%;
+  position: relative;
+}
+
+.group {
+  margin-top: 15px;
+}
+
+.group a {
+  text-decoration: none;
+  color: var(--black-color);
+  font-size: 20px;
+  text-transform: capitalize;
+  padding: 10px 10px;
+  border-radius: 5px;
+}
+
+.group a:hover{
+    color: var(--green-color);
+    background-color: var(--light-green-color);
+}
+
+.logout-btn-box{
+    position: absolute;
+    bottom: 20px;
+}

@@ -1,0 +1,149 @@
+.add-product-page {
+  display: flex;
+  justify-content: space-between;
+  overflow: auto;
+  height: 100%;
+}
+
+.add-product-page aside {
+  width: 35%;
+}
+
+.add-product-page .add-product-form {
+  width: 63%;
+}
+.add-product-page .add-product-form .heading {
+  color: var(--green-color);
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.add-product-page .add-product-form .price-category {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.add-product-page .add-product-form .price-category .group input {
+  width: 30%;
+}
+
+.add-product-page .add-product-form .group {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.add-product-page .add-product-form .group input,
+.add-product-page .add-product-form .group select {
+  width: 100%;
+  height: 35px;
+  padding: 0 10px;
+  font-size: 15px;
+  border-radius: 5px;
+  outline: none;
+  margin-top: 10px;
+}
+
+.add-product-page .add-product-form .btn {
+  width: 100%;
+  margin-top: 20px;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  outline: none;
+  border: 2px solid var(--green-color);
+  color: var(--green-color);
+  background-color: transparent;
+  font-weight: 900;
+  cursor: pointer;
+  transition: all ease 0.5s;
+}
+
+.add-product-page .add-product-form .btn:hover {
+  color: var(--white-color);
+  background-color: var(--green-color);
+}
+
+.upload__box {
+  padding: 40px;
+}
+
+.upload__inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.upload__btn {
+  display: inline-block;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  min-width: 116px;
+  padding: 5px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 2px solid;
+  background-color: var(--green-color);
+  border-color: var(--green-color);
+  border-radius: 10px;
+  line-height: 26px;
+  font-size: 14px;
+}
+
+.upload__btn:hover {
+  background-color: unset;
+  color: var(--green-color);
+  transition: all 0.3s ease;
+}
+
+.upload__btn-box {
+  margin-bottom: 10px;
+}
+
+.upload__img-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+}
+
+.upload__img-box {
+  width: 100px;
+  padding: 0 10px;
+  margin-bottom: 12px;
+}
+
+.upload__img-close {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  text-align: center;
+  line-height: 24px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.upload__img-close:after {
+  content: "\2716";
+  font-size: 14px;
+  color: white;
+}
+
+.img-bg {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  padding-bottom: 100%;
+}

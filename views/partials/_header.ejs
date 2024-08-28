@@ -1,0 +1,60 @@
+<nav>
+  <section class="nav-top">
+    <div class="logo-container">
+      <a href="/">
+        <% if (settings.logo ) { %>
+        <img class="logo" src="/images/logo/<%= settings.logo %>" alt="" />
+        <% } else { %>
+        <img class="logo" src="/images/logo/default.png" alt="" />
+        <% } %>
+      </a>
+    </div>
+    <div class="header-phone">
+      <% if (settings.whatsappNumber) { %>
+      <a href="https://wa.me/92<%=settings.whatsappNumber%>" target="_blank"
+        ><span><i class="bi bi-telephone"></i></span>
+        <h2>+92 <%= settings.whatsappNumber %></h2></a
+      >
+      <% } else { %>
+      <h2>+923 000000000</h2>
+      <% } %>
+    </div>
+    <form class="search-form" method="get" action="/search">
+      <input
+        type="search"
+        placeholder="Search Product..."
+        name="search"
+        id="search"
+      />
+      <button type="submit"><i class="bi bi-search"></i></button>
+    </form>
+    <div class="icons">
+      <a href="<%= settings.facebook %>" target="_blank">
+        <i class="bi bi-facebook"></i>
+      </a>
+      <a href="<%= settings.X %>" target="_blank"
+        ><i class="bi bi-twitter-x"></i
+      ></a>
+      <!-- <a href="<%= settings.LinkedIn %>" target="_blank"><i class="bi bi-linkedin"></i></a> -->
+      <a href="<%= settings.Instagram %>" target="_blank"
+        ><i class="bi bi-instagram"></i
+      ></a>
+    </div>
+  </section>
+  <section class="nav-bottom">
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/shop">Shop</a></li>
+      <% if (typeof categories !== 'undefined') { %> <%
+      categories.forEach(category => { %>
+      <li>
+        <a href="/category/<%= category.categoryName %>"
+          ><%= category.categoryName %></a
+        >
+      </li>
+      <% }); %> <% } else { %>
+      <li>No categories available</li>
+      <% } %>
+    </ul>
+  </section>
+</nav>

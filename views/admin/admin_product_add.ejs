@@ -1,0 +1,96 @@
+<form
+  class="add-product-page"
+  action="/products/add"
+  enctype="multipart/form-data"
+  method="post"
+>
+  <div class="add-product-form">
+    <h2 class="heading">General Information</h2>
+    <div class="group">
+      <label for="page-title">Page Title</label>
+      <input
+        type="text"
+        id="page-title"
+        placeholder="Page Title"
+        name="pageTitle"
+      />
+    </div>
+
+    <div class="group">
+      <label for="product-name">Product Name</label>
+      <input
+        type="text"
+        id="product-name"
+        placeholder="Enter Product name"
+        name="productName"
+      />
+    </div>
+    <div class="price-category">
+      <div class="group">
+        <label for="category">Select Category</label>
+        <select name="category" id="category">
+          <option selected value="">Select A Category</option>
+          <% categories.forEach(category => { %>
+          <option value="<%= category.categoryName %>">
+            <%= category.categoryName %>
+          </option>
+          <% }) %>
+        </select>
+      </div>
+      <div class="group">
+        <label for="price">Price</label>
+        <input type="number" id="price" placeholder="Price" name="price" />
+      </div>
+    </div>
+
+    <div class="group">
+      <label for="editor">Description</label>
+      <textarea
+        name="productDescription"
+        id="editor"
+        cols="30"
+        rows="10"
+      ></textarea>
+    </div>
+    <div class="group">
+      <label for="meta-description">Meta Description</label>
+      <input
+        id="meta-description"
+        type="text"
+        placeholder="Enter Meta Description"
+        name="productmetaDescription"
+      />
+    </div>
+    <div class="group">
+      <label for="meta-Keywords">Meta Keywords</label>
+      <input
+        id="meta-Keywords"
+        type="text"
+        placeholder="Enter Meta keywords"
+        name="metaKeywords"
+      />
+    </div>
+    <% if (messages.error) { %>
+      <p class="error" id="error" style="font-size: 16px;"><%= messages.error %></p>
+      <% } %>
+    <input type="submit" value="Add Product" class="btn" />
+  </div>
+
+  <aside class="add-product-side">
+    <div class="upload__box">
+      <div class="upload__btn-box">
+        <label class="upload__btn">
+          <p>Chose images</p>
+          <input
+            type="file"
+            multiple=""
+            name="images"
+            data-max_length="20"
+            class="upload__inputfile"
+          />
+        </label>
+      </div>
+      <div class="upload__img-wrap"></div>
+    </div>
+  </aside>
+</form>

@@ -1,0 +1,36 @@
+.message-btns{
+    margin: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.message-btns .d-btn{
+    color: white;
+    background-color: red;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.message-btns .d-btn:hover{
+    background-color: white;
+    color: red;
+    border: 1px solid red;
+}
+
+.message-btns .r-btn{
+    color: white;
+    background-color: var(--green-color);
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.message-btns .r-btn:hover{
+    background-color: white;
+    color: var(--green-color);
+    border: 1px solid var(--green-color);
+}
+
+.message-container{
+    line-height: 2;
+}

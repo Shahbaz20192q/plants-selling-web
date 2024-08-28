@@ -1,0 +1,38 @@
+<h1>Email</h1>
+<form action="/admin/customers/mail" method="post" class="add-product-page">
+  <div class="add-product-form" style="text-align: center; margin: auto">
+    <h3>Enter Mail To All Members</h3>
+    <div class="group">
+      <label for="emails">Emails</label>
+      <input
+        type="text"
+        id="webDescription"
+        name="emails"
+        placeholder="Emails"
+        value="<% customers.forEach(customer => { %><%= customer.customer %>, <% }) %>"
+      />
+    </div>
+
+    <div class="group">
+      <label for="subject">Subject</label>
+      <input type="text" id="webName" name="subject" placeholder="subject" />
+    </div>
+
+    <div class="group">
+      <label for="Email-body">Email Body</label>
+      <textarea
+        type="text"
+        id="Email-body"
+        name="EmailBody"
+        placeholder="Email Body"
+        style="height: 250px; padding: 10px"
+      ></textarea>
+    </div>
+
+    <% if (messages.success) { %>
+    <p class="seccessMessage"><%= messages.success %></p>
+    <% } %>
+
+    <input type="submit" class="btn" value="Send Mail" />
+  </div>
+</form>

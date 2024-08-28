@@ -1,0 +1,36 @@
+.email-box{
+    width: 100%;
+    margin: 5px 0;
+    text-align: center;
+    /* background-color: #1c1b1bb5; */
+    /* color: var(--white-color); */
+    padding: 15px 0;
+    font-size: 20px;
+    border-radius: 10px;
+    border: 2px solid var(--green-color);
+}
+
+.email-box p{
+    font-weight: 700;
+}
+
+.email-box #email{
+    height: 30px;
+    width: 400px;
+    padding: 5px 10px;
+    border-radius: 10px 0px 0px 10px;
+    outline: none;
+    border: 1px solid;
+}
+
+.email-box button{
+    background-color: var(--green-color);
+    height: 30px;
+    padding: 5px 10px;
+    color: var(--white-color);
+    font-weight: 900;
+    border: none;
+    outline: none;
+    border-radius: 0px 10px 10px 0px;
+    cursor: pointer;
+}

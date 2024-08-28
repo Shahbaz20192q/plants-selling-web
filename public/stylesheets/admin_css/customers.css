@@ -1,0 +1,17 @@
+.customers-mail-link{
+    float: right;
+    margin-right: 20px;
+    font-size: 20px;
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+
+.customers-table{
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+}
+
+.customers-table tr{
+    margin-top: 30px;
+}

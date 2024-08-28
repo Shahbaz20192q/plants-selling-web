@@ -1,0 +1,28 @@
+<% if (products.length > 0) { %>
+<section class="product-wrepper">
+  <h1 class="f-heading">Search</h1>
+  <div class="product-div">
+    <% products.forEach(product => { %>
+    <div
+      class="product"
+      onclick="window.location = '/product/<%=product._id%>'"
+    >
+      <div class="image-box">
+        <img
+          src="/images/products/<% for( let i = 0; i < 1; i++ ) { %><%= product.images[i] %><% } %>"
+          alt=""
+        />
+      </div>
+      <div class="p-name">
+        <h3><%= product.productName %></h3>
+        <h4><span>Rs</span> <%=product.price %></h4>
+      </div>
+      <div class="p-description"><%= product.productmetaDescription %></div>
+    </div>
+    <% }) %>
+  </div>
+</section>
+
+<% } else { %>
+  <h3 style="text-align: center;">No Product found</h3>  
+<% } %>

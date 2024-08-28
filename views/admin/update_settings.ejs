@@ -1,0 +1,129 @@
+<h1>Settings</h1>
+<form
+  action="/settings/updade"
+  method="post"
+  enctype="multipart/form-data"
+  class="add-product-page"
+>
+  <div class="add-product-form" style="text-align: center; margin: auto">
+    <h3>Basic Information</h3>
+    <div class="group">
+      <label for="webName">Website Name</label>
+      <input
+        type="text"
+        id="webName"
+        name="webName"
+        placeholder="Webside Name"
+        value="<%= settings.webName %>"
+      />
+    </div>
+
+    <div class="group">
+      <label for="webDescription">Website Description</label>
+      <input
+        type="text"
+        id="webDescription"
+        name="webDescription"
+        placeholder="Webside Description"
+        value="<%= settings.webDescription %>"
+      />
+    </div>
+
+    <div class="group">
+      <label for="webKeywords">Website Keywords</label>
+      <input
+        type="text"
+        id="webKeywords"
+        name="webKeywords"
+        placeholder="Webside Keywords"
+        value="<%= settings.webKeywords %>"
+      />
+    </div>
+    <br />
+    <h3>Logo</h3>
+    <div class="group">
+      <label id="Logo-label" for="logo-input">Chose Logo</label>
+      <input type="file" name="logo" id="logo-input" />
+    </div>
+
+    <br />
+
+    <h3>Contact Information</h3>
+    <div class="group">
+      <label for="whatsapp-number">Whatsapp Number</label>
+      <input
+        type="text"
+        id="whatsapp-number"
+        name="whatsappNumber"
+        placeholder="Whatsapp Number"
+        value="<%= settings.whatsappNumber %>"
+      />
+    </div>
+
+    <div class="group">
+      <label for="other-number">Other Number</label>
+      <input
+        type="text"
+        id="other-number"
+        name="otherNumber"
+        placeholder="Other Number"
+        value="<%= settings.otherNumber %>"
+      />
+    </div>
+
+    <div class="group">
+      <label for="email">Email</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Email"
+        value="<%= settings.email %>"
+      />
+    </div>
+    <br />
+
+    <h3>Social Links</h3>
+    <div class="group">
+      <label for="Facebook">Facebook</label>
+      <input
+        type="text"
+        id="Facebook"
+        name="facebook"
+        placeholder="Facebook Link"
+        value="<%= settings.facebook %>"
+      />
+    </div>
+    <div class="group">
+      <label for="X">X</label>
+      <input
+        type="text"
+        id="X"
+        name="X"
+        placeholder="X Link"
+        value="<%= settings.X %>"
+      />
+    </div>
+    <div class="group">
+      <label for="LinkedIn">LinkedIn</label>
+      <input
+        type="text"
+        id="LinkedIn"
+        name="LinkedIn"
+        placeholder="LinkedIn Link"
+        value="<%= settings.LinkedIn %>"
+      />
+    </div>
+    <div class="group">
+      <label for="Instagram">Instagram</label>
+      <input
+        type="text"
+        id="Instagram"
+        name="Instagram"
+        placeholder="Instagram Link"
+        value="<%= settings.Instagram %>"
+      />
+    </div>
+    <input type="submit" class="btn" value="Update" />
+  </div>
+</form>

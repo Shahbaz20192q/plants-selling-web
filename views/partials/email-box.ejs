@@ -1,0 +1,18 @@
+<div class="email-box">
+  <p>Enter Your email to get in touch with us</p>
+  <form class="email-form" method="post" action="/subscribe">
+    <input
+      type="email"
+      placeholder="Enter Your Email"
+      name="email"
+      id="email"
+      required
+    />
+    <button type="submit">Subscribe</button>
+  </form>
+  <% if (messages.error) { %>
+  <p class="error"><%= messages.error %></p>
+  <% } else { %>
+  <p class="success"><%= messages.success %></p>
+  <% } %>
+</div>

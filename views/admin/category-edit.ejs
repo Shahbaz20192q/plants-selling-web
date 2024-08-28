@@ -1,0 +1,85 @@
+<form
+  class="add-product-page"
+  action="/category/edit/<%= category._id %>"
+  enctype="multipart/form-data"
+  method="post"
+>
+  <div class="add-product-form">
+    <h2 class="heading">General Information</h2>
+    <div class="group">
+      <label for="page-title">Page Title</label>
+      <input
+        type="text"
+        id="page-title"
+        placeholder="Page Title"
+        name="pageTitle"
+        value="<%= category.pageTitle %>"
+      />
+    </div>
+
+    <div class="group">
+      <label for="category-name">Category Name</label>
+      <input
+        type="text"
+        id="category-name"
+        placeholder="Enter category name"
+        name="categoryName"
+        value="<%= category.categoryName %>"
+      />
+    </div>
+
+    <div class="group">
+      <label for="editor">Description</label>
+      <textarea name="categoryDescription" id="editor" cols="30" rows="10">
+ <%= category.categoryDescription %> </textarea
+      >
+    </div>
+    <div class="group">
+      <label for="meta-description">Meta Description</label>
+      <input
+        id="meta-description"
+        type="text"
+        placeholder="Enter Meta Description"
+        name="categorymetaDescription"
+        value="<%= category.categorymetaDescription %>"
+      />
+    </div>
+    <div class="group">
+      <label for="meta-Keywords">Meta Keywords</label>
+      <input
+        id="meta-Keywords"
+        type="text"
+        placeholder="Enter Meta keywords"
+        name="metaKeywords"
+        value="<%= category.metaKeywords %>"
+      />
+    </div>
+
+    <input type="submit" value="Update Category" class="btn" />
+  </div>
+
+  <aside class="add-product-side">
+    <div class="upload__box">
+      <div class="upload__btn-box">
+        <label class="upload__btn">
+          <p>Chose images</p>
+          <input
+            type="file"
+            name="image"
+            data-max_length="20"
+            class="upload__inputfile"
+          />
+        </label>
+      </div>
+      <div class="upload__img-wrap">
+        <div class="upload__img-box" style="display: flex; gap: 10px">
+          <img
+            style="width: 300px"
+            src="/images/category/<%= category.image %>"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+  </aside>
+</form>

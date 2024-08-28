@@ -1,0 +1,147 @@
+.nav-top {
+  padding: 15px;
+  background: linear-gradient(290deg, var(--green-color) 30%, #fff 60%);
+  font-size: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  border-bottom: 1px solid lightgray;
+}
+
+.nav-top .logo-container .logo {
+  max-width: 300px;
+}
+
+.icons {
+  font-size: 30px;
+  width: 18%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: blue; */
+}
+
+.icons i {
+  padding: 10px;
+  background-color: var(--white-color);
+  border-radius: 50%;
+  cursor: pointer;
+  color: var(--green-color);
+  transition: all ease-in-out 0.2s;
+}
+
+.icons i:hover {
+  background-color: var(--green-color);
+  color: var(--white-color);
+}
+
+.header-phone a {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  text-decoration: none;
+  color: var(--green-color);
+}
+
+.header-phone a h2{
+  font-size: 23px;
+}
+
+.header-phone a i {
+  padding: 10px;
+  color: var(--white-color);
+  border-radius: 50%;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: var(--green-color);
+  transition: all ease-in-out 0.2s;
+}
+
+.header-phone:hover i {
+  background-color: var(--white-color);
+  color: var(--green-color);
+}
+
+.search-form {
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.search-form input,
+.search-form button {
+  outline: none;
+  border: none;
+  background: none;
+  font-size: 20px;
+  height: 100%;
+  background-color: var(--white-color);
+}
+
+.search-form button {
+  font-size: 30px;
+  padding: 5px;
+  background-color: var(--light-green-color);
+  border-radius: 0px 15px 15px 0;
+  color: var(--white-color);
+}
+
+.search-form input {
+  padding: 5px;
+  border-radius: 15px 0 0 15px;
+}
+
+/* nav links */
+
+.nav-bottom {
+  height: 60px;
+  /* background-color: var(--light-green-color); */
+}
+
+footer .footer-nave .footer-ul,
+.nav-bottom ul {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+footer ul li,
+.nav-bottom ul li {
+  list-style: none;
+  position: relative;
+}
+
+footer a,
+.nav-bottom ul li a {
+  text-decoration: none;
+  color: var(--green-color);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+footer ul li::after,
+.nav-bottom ul li::after {
+  content: "";
+  height: 2px;
+  width: 0px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  transition: all ease-in-out 0.5s;
+}
+
+footer ul li:hover::after,
+.nav-bottom ul li:hover::after {
+  width: 100%;
+  background: var(--light-green-color);
+}
+
+footer ul li:hover a,
+.nav-bottom ul li:hover a {
+  color: var(--light-green-color);
+}

@@ -1,0 +1,112 @@
+.single_product-wrepar {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  background-color: var(--light-gray-color);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.single_product-wrepar .image_gal{
+    width: 50%;
+}
+
+.single_product-wrepar .image_gal .image_box{
+    height: 400px;
+    width: 80%;
+    overflow: hidden;
+    margin: auto;
+    margin-bottom: 10px;
+    border-radius: 20px;
+}
+
+.single_product-wrepar .image_gal .image_box:hover img{
+    scale: 1.1;
+}
+
+.single_product-wrepar .image_gal .image_box img{
+    width: 100%;
+    height: 100%;
+    transition: all ease .5s;
+}
+
+.single_product-wrepar .image_gal .gal_box{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.single_product-wrepar .image_gal .gal_box img{
+    width: 20%;
+    height: 100px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.single_product-wrepar .description_box{
+    padding: 10px;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.single_product-wrepar .description_box .single_product-name{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--green-color);
+    color: var(--green-color);
+    padding: 10px 0;
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: 700;
+}
+
+.single_product-wrepar .description_box .single_product-name h3,
+.single_product-wrepar .description_box .single_product-name h2{
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+.single_product-wrepar .description_box .single_product-name h2{
+    width: 70%;
+}
+
+.single_product-wrepar .description_box .single_product-description{
+    font-size: 18px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    height: 100%;
+}
+
+.single_product-wrepar .description_box .single_product-description a{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 10px 20px;
+    border: 1px solid var(--green-color);
+    border-radius: 20px;
+    margin-top: 20px;
+    color: var(--green-color);
+    transition: all ease .5s;
+}
+
+.single_product-wrepar .description_box .single_product-description a:hover{
+    background: var(--green-color);
+    color: var(--light-gray-color);
+}

@@ -1,0 +1,27 @@
+<div class="messages-container">
+  <h1>Messages / Comments</h1>
+  <div class="messages">
+    <table>
+      <thead>
+        <tr>
+          <th>Sr. No</th>
+          <th>Usar Name</th>
+          <th>Email</th>
+          <th>message</th>
+          <th>Red more</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% messages.reverse().forEach((message, index) => { %>
+        <tr>
+          <td><%= index + 1 %></td>
+          <td><%= message.userName %></td>
+          <td><%= message.email %></td>
+          <td class="message"><%= message.message %></td>
+          <td><a href="/admin/messages/<%= message._id %>">Rede more</a></td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,161 @@
+<link rel="stylesheet" href="/stylesheets/admin_css/add_product.css" />
+
+<div class="buy-form">
+  <p style="font-size: 20px; float: right; color: green">
+    Totle Price : <span id="totle-price"><%= product.price %></span>
+  </p>
+  <form
+    class="add-product-page"
+    action="/pay/product/<%= product._id %>"
+    method="post"
+  >
+    <div class="add-product-form">
+      <h2 class="heading">Order Form</h2>
+      <div class="price-category">
+        <div class="group">
+          <label for="first-name">First name</label>
+          <input
+            required
+            type="text"
+            name="firstName"
+            id="first-name"
+            placeholder="First Name"
+          />
+        </div>
+        <div class="group">
+          <label for="last-name">Last name</label>
+          <input
+            required
+            type="text"
+            name="lastName"
+            id="last-name"
+            placeholder="last Name"
+          />
+        </div>
+      </div>
+
+      <div class="group">
+        <label for="quantity">Quantity</label>
+        <input
+          required
+          type="number"
+          min="1"
+          name="quantity"
+          id="quantity"
+          placeholder="Quantity"
+          value="1"
+          oninput="updatePrice()"
+        />
+      </div>
+
+      <div class="group">
+        <label for="emil">Your Email</label>
+        <input
+          required
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Email"
+        />
+      </div>
+
+      <div class="group">
+        <label for="phone">Your Phone Number</label>
+        <input
+          required
+          type="number"
+          name="phone"
+          id="phone"
+          placeholder="Phone Number"
+        />
+      </div>
+
+      <div class="group">
+        <label for="countery">countery</label>
+        <input
+          required
+          type="text"
+          name="countery"
+          id="countery"
+          placeholder="countery"
+        />
+      </div>
+
+      <div class="group">
+        <label for="state">State/Province</label>
+        <input
+          required
+          type="text"
+          name="state"
+          id="state"
+          placeholder="State/Province"
+        />
+      </div>
+
+      <div class="group">
+        <label for="city">City</label>
+        <input required type="text" name="city" id="city" placeholder="city" />
+      </div>
+
+      <div class="group">
+        <label for="address">Full Address</label>
+        <input
+          required
+          type="text"
+          name="address"
+          id="address"
+          placeholder="Full Address"
+        />
+      </div>
+
+      <div class="group">
+        <label for="zip">Zip/Postel Code</label>
+        <input
+          required
+          type="text"
+          name="zip"
+          id="zip"
+          placeholder="zip / Postel Code"
+        />
+      </div>
+
+      <% if (messages.error) { %>
+      <p
+        class="error"
+        id="error"
+        style="
+          font-size: 16px;
+          margin-top: 10px;
+          margin-bottom: -10px;
+          color: var(--deep-red-color);
+        "
+      >
+        <%= messages.error %>
+      </p>
+      <% } %> <% if (messages.success) { %>
+      <p
+        class="error"
+        id="error"
+        style="
+          font-size: 16px;
+          margin-top: 10px;
+          margin-bottom: -10px;
+          color: var(--green-color);
+        "
+      >
+        <%= messages.success %>
+      </p>
+      <% } %>
+      <input required type="submit" value="Add Product" class="btn" />
+    </div>
+  </form>
+</div>
+
+<script>
+  let totlePrice = document.getElementById("totle-price");
+  let quantity = document.getElementById("quantity");
+
+  function updatePrice() {
+    totlePrice.innerHTML = quantity.value * "<%= product.price  %>";
+  }
+</script>

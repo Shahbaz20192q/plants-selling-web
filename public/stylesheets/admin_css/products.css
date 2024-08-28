@@ -1,0 +1,86 @@
+.container .order_nav .order_ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+
+.container .order_nav .order_ul .order-li {
+  list-style: none;
+  position: relative;
+}
+
+.container .order_nav .order_ul .order-li a {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: var(--black-color);
+}
+
+.container .order_nav .order_ul .order-li a::after {
+  content: "";
+  width: 0px;
+  height: 2px;
+  background-color: var(--green-color);
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  transition: all ease 0.5s;
+}
+
+.container .order_nav .order_ul .order-li a.active::after {
+  width: 100%;
+}
+
+.container .order_nav .order_ul .order-li:hover a::after {
+  width: 100%;
+}
+
+.container {
+  height: 100%;
+  overflow: auto;
+}
+
+.container .orders_list table tr {
+  cursor: pointer;
+}
+
+.container .orders_list table tr th,
+.container .orders_list table tr td {
+  padding: 5px;
+  text-align: start;
+  min-width: 80px;
+  max-width: 400px;
+}
+
+.container .orders_list table {
+  text-align: start;
+  width: 100%;
+  margin-top: 20px;
+  text-transform: capitalize;
+}
+
+.img-sell {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 2px;
+}
+
+.img-sell img {
+  border-radius: 5px;
+  width: 80px;
+}
+
+.container .add_product,
+.container .add_category {
+  font-size: 17px;
+  color: var(--green-color);
+  font-weight: 800;
+  float: right;
+  margin: 10px;
+  text-decoration: underline;
+}
+
+.container .add_category {
+  float: left;
+}

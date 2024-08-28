@@ -1,0 +1,31 @@
+<div class="category-wrapper">
+  <h1 style="text-align: center; margin: 10px 0; font-size: 30px; color: var(--green-color);"><%= category.categoryName%></h1>
+  <div class="category-container">
+    <div class="discription"><%- category.categoryDescription %></div>
+    <div class="category-image">
+      <img src="/images/category/<%= category.image %>" alt="" />
+    </div>
+  </div>
+  <hr />
+  <div class="category-products">
+    <h2 style="margin-top: 20px; color: var(--green-color);">Products</h2>
+    <% category.products.forEach(product => { %>
+    <div
+      class="product"
+      onclick="window.location = '/product/<%=product._id%>'"
+    >
+      <div class="image-box">
+        <img
+          src="/images/products/<% for( let i = 0; i < 1; i++ ) { %><%= product.images[i] %><% } %>"
+          alt=""
+        />
+      </div>
+      <div class="p-name">
+        <h3><%= product.productName %></h3>
+        <h4><span>Rs</span> <%=product.price %></h4>
+      </div>
+      <div class="p-description"><%= product.productmetaDescription %></div>
+    </div>
+    <% }) %>
+  </div>
+</div>

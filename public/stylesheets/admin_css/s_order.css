@@ -1,0 +1,74 @@
+.order-container {
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+}
+.order-container h1 {
+  color: var(--green-color);
+  font-weight: bold;
+  text-align: center;
+}
+
+.order-container .order .image-container {
+  overflow: hidden;
+  width: 100%;
+}
+.order-container .order .image-container img {
+  width: 100%;
+  max-height: 400px;
+}
+
+.order-container .order .order-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.order-container .order .user_info {
+  margin-top: 10px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.order-container .btns-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  margin-top: 20px;
+}
+
+.order-container .btns-div a {
+  padding: 8px 15px;
+  border-radius: 10px;
+  color: var(--white-color);
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+.complete_btn {
+  background-color: var(--green-color);
+  border: 2px solid var(--green-color);
+  transition: all ease 0.5s;
+}
+
+a.complete_btn:hover {
+  background-color: transparent;
+  color: var(--green-color);
+}
+
+.delete_btn,
+.cancel_btn {
+  background-color: var(--deep-red-color);
+  border: 2px solid var(--deep-red-color);
+  transition: all ease 0.5s;
+}
+
+a.delete_btn:hover,
+a.cancel_btn:hover {
+  background-color: transparent;
+  color: var(--deep-red-color);
+}

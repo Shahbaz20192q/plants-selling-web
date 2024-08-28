@@ -1,0 +1,8 @@
+.buy-form .add-product-page{
+align-items: center;
+justify-content: center;
+}
+
+.buy-form .add-product-page .add-product-form .price-category .group input{
+    width: 100%;
+}

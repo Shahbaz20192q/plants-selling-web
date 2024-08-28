@@ -1,0 +1,34 @@
+<div class="container">
+  <h3 class="add_product"><a href="/admin/category/add">Add category</a></h3>
+
+  <div class="orders_list">
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>categories name</th>
+          <th>date</th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% categories.forEach((category,index) => { %>
+        <tr>
+          <td><%= index+1 %></td>
+          <td class="img-sell">
+            <span
+              ><img
+                src="/images/category/<%= category.image %>"
+                alt="" /></span
+            ><span><%= category.categoryName %></span>
+          </td>
+          <td><%= category.creadeDateTime.toDateString() %></td>
+          <td><a href="/category/edit/<%= category._id %>">Edit</a></td>
+          <td><a href="">Delete</a></td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+</div>

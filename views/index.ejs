@@ -1,0 +1,47 @@
+<!-- Slider -->
+
+<div class="container">
+  <div class="image">
+    <img src="/images/Static images/02-1-scaled-1.webp" alt="" />
+  </div>
+  <div class="image">
+    <img src="/images/Static images/02-scaled-1.webp" alt="" />
+  </div>
+  <!-- <div class="image">
+    <img src="" alt="" />
+  </div> -->
+
+  <div class="button">
+    <a onclick="nextimg(-1)" class="prev">&#10094;</a>
+    <a onclick="nextimg(1)" class="next btn">&#10095;</a>
+  </div>
+
+  <div class="dots">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <!-- <span class="dot" onclick="currentSlide(3)"></span> -->
+  </div>
+</div>
+
+<!--  -->
+
+<section class="product-wrepper">
+  <h1 class="f-heading">Feature Products</h1>
+  <div class="product-div">
+    <% products.forEach(product => { %>
+    <div class="product" onclick="window.location = '/product/<%=product._id%>'">
+      <div class="image-box">
+        <img
+          src="/images/products/<% for( let i = 0; i < 1; i++ ) { %><%= product.images[i] %><% } %>"
+          alt=""
+        />
+      </div>
+      <div class="p-name">
+        <h3><%= product.productName %></h3>
+        <h4><span>Rs</span> <%=product.price %></h4>
+      </div>
+      <div class="p-description"><%= product.productmetaDescription %></div>
+    </div>
+    <% }) %>
+  </div>
+</section>

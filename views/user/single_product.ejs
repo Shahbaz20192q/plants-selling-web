@@ -1,0 +1,53 @@
+<section class="single_product-wrepar">
+  <div class="image_gal">
+    <div class="image_box">
+      <img id="main_gal_img" src="" alt="" />
+    </div>
+    <div class="gal_box">
+      <% product.images.forEach(image => { %>
+      <img
+        class="gal_img"
+        id="firstImage"
+        src="/images/products/<%=image%>"
+        alt=""
+      />
+      <% }) %>
+      <!-- <img
+        class="gal_img"
+        src="/images/Static images/Allama Iqbal.jpg"
+        alt=""
+      />
+      <img
+        class="gal_img"
+        src="/images/Static images/Jaun Elia.jpg"
+        alt=""
+      />
+      <img
+        class="gal_img"
+        src="/images/Static images/02-1-scaled-1.webp"
+        alt=""
+      /> -->
+    </div>
+  </div>
+  <div class="description_box">
+    <div class="single_product-name">
+      <h2><%= product.productName %></h2>
+      <h3><span>Rs</span> <%= product.price %></h3>
+    </div>
+    <div class="single_product-description">
+      <p class="single_product-description-box">
+        <%-product.productDescription %>
+      </p>
+      <a href="/product/<%= product._id %>/buy">buy now</a>
+    </div>
+  </div>
+</section>
+
+<script>
+  window.onload = function () {
+    const mainImage = document.getElementById("main_gal_img");
+    const FirstImage = document.getElementById("firstImage");
+
+    mainImage.src = FirstImage.src;
+  };
+</script>

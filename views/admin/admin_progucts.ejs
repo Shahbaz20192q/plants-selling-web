@@ -1,0 +1,36 @@
+<div class="container">
+  <h3 class="add_product"><a href="/admin/products/add">Add Product</a></h3>
+  <h3 class="add_category"><a href="/admin/categories">categories </a></h3>
+  <div class="orders_list">
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>product name</th>
+          <th>date</th>
+          <th>Price</th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% products.forEach((product,index) => { %>
+        <tr>
+          <td><%= index + 1 %></td>
+          <td class="img-sell">
+            <span
+              ><img
+                src="/images/products/<% for( let i = 0; i < 1; i++ ) { %><%= product.images[i]%><% } %> "
+                alt="" /></span
+            ><span><%= product.productName %></span>
+          </td>
+          <td><%= product.creadeDateTime.toDateString() %></td>
+          <td>Rs <%= product.price %></td>
+          <td><a href="/admin/products/edit/<%= product._id %>">Edit</a></td>
+          <td><a href="/products/delete/<%= product._id %>">Delete</a></td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+</div>

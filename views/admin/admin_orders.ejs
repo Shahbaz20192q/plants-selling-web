@@ -1,0 +1,51 @@
+<div class="container">
+  <%- include('../partials/order_filter_link.ejs') %>
+
+  <div class="orders_list">
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Order id</th>
+          <th>product name</th>
+          <th>address</th>
+          <th>date</th>
+          <th>Price</th>
+          <th>status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% orders.reverse().forEach((order, index) => { %>
+        <tr onclick="window.location='/admin/orders/<%=order._id %>'">
+          <td><%= index + 1 %></td>
+          <td><%= order._id %></td>
+          <td class="img-sell">
+            <span>
+              <% for( let i = 0; i < 1; i++ ) { %>
+              <img src="/images/products/<%= order.productImage[i] %>" alt="" />
+              <% } %> </span
+            ><span><%= order.productName %></span>
+          </td>
+          <td><%= order.address %></td>
+          <td><%= order.creadeDateTime.toDateString() %></td>
+          <td><%= order.productPrice %></td>
+          <td class="order_status"><%= order.status %></td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<script>
+  const orderStatus = document.querySelectorAll(".order_status");
+  orderStatus.forEach(function (e) {
+    if (e.innerText == "Cancel") {
+      e.style.color = "var(--deep-red-color)";
+    } else if (e.innerText == "Completed") {
+      e.style.color = "var(--green-color)";
+    } else {
+      e.style.color = "var(--yellow-color)";
+    }
+  });
+</script>

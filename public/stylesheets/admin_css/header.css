@@ -1,0 +1,39 @@
+.admin-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.search-form {
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  border: 2px solid var(--light-green-color);
+}
+
+.search-form input,
+.search-form button {
+  outline: none;
+  border: none;
+  background: none;
+  font-size: 20px;
+  height: 100%;
+  background-color: var(--light-gray-color);
+}
+
+.search-form button {
+  font-size: 30px;
+  padding: 5px 10px;
+  background-color: var(--light-green-color);
+  border-radius: 0px 10px 10px 0;
+  color: var(--white-color);
+  cursor: pointer;
+}
+
+.search-form input {
+  padding: 5px;
+  border-radius: 15px 0 0 15px;
+}
